@@ -42,10 +42,18 @@ with open(budget_csv, newline="") as csvfile:
 	
 	
 	print("Financial Analysis")
-	print("----------------------------------")
+	print("----------------------------------------------")
 	print("Total Months: ",i)
 	print("Total: $"+str(total))
 	print(f"Average Change: ${avgChange}")
 	print(f"Greatest Increase In Profits: {maxDate} (${maxChange})")
 	print(f"Greatest Decrease In Profits: {minDate} (${minChange})")
 	
+with open('sumBudget.txt', 'w') as tf:
+	tf.write("Financial Analysis\n")
+	tf.write("----------------------------------------------\n")
+	tf.write(f"Total Months: {i}\n")
+	tf.write(f"Total: ${total}\n")
+	tf.write(f"Average Change: ${avgChange}\n")
+	tf.write(f"Greatest Increase In Profits: {maxDate} (${maxChange})\n")
+	tf.write(f"Greatest Decrease In Profits: {minDate} (${minChange})\n")
